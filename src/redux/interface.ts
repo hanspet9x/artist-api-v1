@@ -1,6 +1,7 @@
-import { IArtists } from "../services/interfaces/artisits";
+import { IDialogState } from "./dialog/IDialog";
+import { IArtistsState } from './artists/IArtists';
 
-export interface IReducerActions {
-    type: string;
-    payload: IArtists[];
+export interface IRootState {
+    artists: IArtistsState;
+    dialog: IDialogState;
 }

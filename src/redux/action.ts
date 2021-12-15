@@ -1,1 +1,4 @@
-export const ARTISTS = "artists";
+export interface IAction<T, P> {
+    type: T;
+    payload: P;
+}
