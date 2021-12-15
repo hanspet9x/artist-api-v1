@@ -3,7 +3,9 @@ export const getApi = async (url: string) => {
         cache: "force-cache"
     });
 
-    return await response.json();
+    const data = await response.json();
+    console.log(url, data);
+    return data;
 }
 
 export const postApi = async (url: string, payload: unknown) => {
@@ -13,5 +15,7 @@ export const postApi = async (url: string, payload: unknown) => {
         headers: {'Content-Type': 'application/json'},
         mode: "cors"
     });
-    return await response.json();
+    const data = await response.json();
+    console.log(url, data);
+    return data;
 }
