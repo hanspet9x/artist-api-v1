@@ -4,9 +4,10 @@ import { IArtists } from "../../services/interfaces/artisits";
 
 export const getArtists = async () => {
     try {
-        const res = await getApi(appUrls.getArtists) as Array<IArtists>;
+        const data = await getApi(appUrls.getArtists) as Array<IArtists>;
+        return data;
     } catch (error) {
-        return Promise.reject()
+        throw error;
     }
 
 }
