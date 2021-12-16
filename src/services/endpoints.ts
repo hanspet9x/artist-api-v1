@@ -1,7 +1,7 @@
 const baseUrl = "https://jsonplaceholder.typicode.com/";
 export const appUrls = {
     getArtists: baseUrl + 'users',
-    getArtistsAlbums: baseUrl + 'albumns',
+    getArtistsAlbums: baseUrl + 'albums',
     getAllTweets: baseUrl + 'comments',
     addTweet: baseUrl + 'comments',
     updateTweet: (commentId: number) => baseUrl + 'comments/' + commentId,
