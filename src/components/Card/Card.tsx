@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { getClassNames } from '../../util';
+import { getClassNames } from '../../utils';
 import './Card.scss';
 interface ICard extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
 

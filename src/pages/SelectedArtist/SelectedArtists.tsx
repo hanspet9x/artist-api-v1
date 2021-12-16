@@ -2,7 +2,7 @@ import React from 'react';
 
 function SelectedArtists() {
     return (
-        <div>
+        <div className="selected-artist">
             
         </div>
     );

@@ -4,7 +4,7 @@ import { Dispatch } from 'redux';
 import DialogAction from '../../redux/dialog/action';
 import { IDialogState } from '../../redux/dialog/IDialog';
 import { IRootState } from '../../redux/interface';
-import { getClassNames } from '../../util';
+import { getClassNames } from '../../utils';
 import Alert from './Alert';
 import Confirm from './Confirm';
 import './Dialog.scss';
