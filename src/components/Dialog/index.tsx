@@ -13,7 +13,7 @@ let dispatch:Dispatch;
 
 export const alert = (dialog: IDialogState) => {
     
-    dispatch(DialogAction.alert(dialog));
+    dispatch(DialogAction.show(dialog));
 }
 
 export const confirm = (dialog: IDialogState, callback: (confirmed: boolean) => void) => {
@@ -23,7 +23,7 @@ export const confirm = (dialog: IDialogState, callback: (confirmed: boolean) => 
         onConfirmed: callback,
         type: dialog.type,
     } as Required<IDialogState>
-    dispatch(DialogAction.confirm(dialogState));
+    dispatch(DialogAction.show(dialogState));
 }
 
 function Dialog() {

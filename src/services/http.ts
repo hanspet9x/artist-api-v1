@@ -4,7 +4,6 @@ export const getApi = async (url: string) => {
     });
 
     const data = await response.json();
-    console.log(url, data);
     return data;
 }
 

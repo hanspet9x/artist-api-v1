@@ -1,0 +1,10 @@
+.artist {
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+
+    .artist-card {
+        background-color: rgb(211, 211, 211);
+        cursor: pointer;
+    }
+}

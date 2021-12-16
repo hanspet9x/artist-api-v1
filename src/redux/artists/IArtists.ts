@@ -1,5 +1,6 @@
-import { IArtists } from "../../services/interfaces/artisits";
+import { IArtist } from "../../services/interfaces/artisits";
 
 export interface IArtistsState {
-    artists: IArtists[];
+    data: IArtist[];
+    selected: IArtist;
 }

@@ -3,8 +3,10 @@ import './Landing.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { getArtists } from './api';
+import { getArtists } from './action';
 import ArtistAction from '../../redux/artists/action';
+import { Link } from 'react-router-dom';
+import { ARTISTS_ROUTE } from '../../routes';
 function Landing() {
     const [loaded, setLoaded] =useState(false);
     const dispatch = useDispatch();
@@ -24,7 +26,11 @@ function Landing() {
     return (
         <div>
             Welcome.
-            {loaded ? <button>Access</button> : "Loading.."}
+            {loaded ? (
+                <Link to={ARTISTS_ROUTE}>
+                    <button>Access</button>
+                </Link>
+            ) : "Loading.."}
         </div>
     );
 }

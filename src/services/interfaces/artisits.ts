@@ -1,4 +1,4 @@
-export interface IArtists {
+export interface IArtist {
     "id": number,
     "name": string,
     "username": string,

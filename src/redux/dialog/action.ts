@@ -1,25 +1,23 @@
 import { IAction } from "../action";
-import { IDialogState, TDialogType } from "./IDialog";
+import { IDialogState } from "./IDialog";
 
 
+export const SHOW_DIALOG = "showDialog";
+export const HIDE_DIALOG = "hideDialog";
 export default class DialogAction {
 
 
-    static alert(dialog: Exclude<IDialogState, "onConfirmed">): IAction<TDialogType, IDialogState>{
-        return {type: "alert", payload: dialog}
+    static show(dialog: Exclude<IDialogState, "onConfirmed">): IAction<string, IDialogState>{
+        return {type: SHOW_DIALOG, payload: dialog}
     }
 
-    static confirm(dialog: Required<IDialogState>): IAction<TDialogType, IDialogState> {
-        return {type: "confirm", payload: dialog}
-    }
-
-    static hide(): IAction<TDialogType, IDialogState> {
+    static hide(): IAction<string, IDialogState> {
         const dialogState = {
             message: "",
             title: "",
             type: "none",
             
         } as IDialogState
-        return {type: "none", payload: dialogState}
+        return {type: HIDE_DIALOG, payload: dialogState}
     }
 }
