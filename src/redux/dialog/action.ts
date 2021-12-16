@@ -13,7 +13,13 @@ export default class DialogAction {
         return {type: "confirm", payload: dialog}
     }
 
-    static hide(dialog: IDialogState): IAction<TDialogType, IDialogState> {
-        return {type: "none", payload: dialog}
+    static hide(): IAction<TDialogType, IDialogState> {
+        const dialogState = {
+            message: "",
+            title: "",
+            type: "none",
+            
+        } as IDialogState
+        return {type: "none", payload: dialogState}
     }
 }

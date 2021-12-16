@@ -1,0 +1,1 @@
+export const getClassNames = (...names: string[]) => names.join(' ');

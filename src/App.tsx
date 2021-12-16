@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Dialog from './components/Dialog';
 import Artists from './pages/Artisits/Artists';
 import Landing from './pages/Landing/Landing';
 import SelectedArtists from './pages/SelectedArtist/SelectedArtists';
@@ -18,6 +19,7 @@ function App() {
           <Route path={SELECTED_ARTIST_ROUTE} element={<SelectedArtists />} />
         </Routes>
       </BrowserRouter>
+      <Dialog />
     </Provider>
   );
 }

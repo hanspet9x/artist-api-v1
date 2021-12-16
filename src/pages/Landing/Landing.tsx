@@ -3,9 +3,8 @@ import './Landing.css';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { IReducerActions } from '../../redux/interface';
-import { ARTISTS } from '../../redux/action';
 import { getArtists } from './api';
+import ArtistAction from '../../redux/artists/action';
 function Landing() {
     const [loaded, setLoaded] =useState(false);
     const dispatch = useDispatch();
@@ -14,7 +13,7 @@ function Landing() {
         (async () => {
             try {
                 const artistsData = await getArtists();
-                dispatch({type: ARTISTS, payload: artistsData} as IReducerActions);
+                dispatch(ArtistAction.setArtists(artistsData));
                 setLoaded(true);
             } catch (error) {
                 
