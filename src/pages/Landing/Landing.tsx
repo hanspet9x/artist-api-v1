@@ -25,10 +25,10 @@ function Landing() {
 
     return (
         <div>
-            Welcome.
+            <h1>Chocolate City Artists.</h1>
             {loaded ? (
                 <Link to={ARTISTS_ROUTE}>
-                    <button>Access</button>
+                    <button>View Artists</button>
                 </Link>
             ) : "Loading.."}
         </div>
