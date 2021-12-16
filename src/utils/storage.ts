@@ -22,12 +22,12 @@ export default class Storage {
     static has(id: string, storageType?: storageType){
         return Storage.getStorage(storageType).getItem(id) !== null;
     }
-    static append(id: string, data: never, storageType?: storageType){
-        Storage.addEx(id, data, true, storageType);
+    static append(id: string, data: any, storageType?: storageType){
+        Storage.addEx(id, data as never, true, storageType);
     }
     
-    static prepend(id: string, data: never, storageType?: storageType){
-        Storage.addEx(id, data, false, storageType);
+    static prepend(id: string, data: any, storageType?: storageType){
+        Storage.addEx(id, data as never, false, storageType);
     }
 
 
